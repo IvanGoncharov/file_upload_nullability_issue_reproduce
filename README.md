@@ -92,6 +92,13 @@ type Image
 }
 ```
 
+## Run subgraph
+
+```sh
+npm install
+npm start
+```
+
 ## Curl command
 
 ```sh
