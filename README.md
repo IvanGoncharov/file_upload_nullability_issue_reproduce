@@ -103,6 +103,7 @@ npm start
 
 ```sh
 curl -X POST http://127.0.0.1:4000/ \
+  -H 'apollo-require-preflight: true' \
   -F 'operations={"operationName":"imageUpload","variables":{"image":null,"height":3706,"width":5089,"fileSizeBytes":280456},"query":"mutation imageUpload($image: Upload!, $width: Int!, $height: Int!, $fileSizeBytes: Int!) {\n  collectionImageUpload(\n    data: {image: $image, width: $width, height: $height, fileSizeBytes: $fileSizeBytes}\n  ) {\n    url\n    __typename\n  }\n}"}' \
   -F 'map={"1":["variables.image"]}' \
   -F '1=@hello.txt;type=text/plain'
