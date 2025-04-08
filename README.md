@@ -3,6 +3,17 @@
 ## Router config
 
 ```yaml
+telemetry:
+  exporters:
+    logging:
+      common:
+        service_name: apollo-router
+      stdout:
+        enabled: true
+  instrumentation:
+    events:
+      subgraph:
+        request: info
 preview_file_uploads:
   enabled: true
   protocols:
